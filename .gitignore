@@ -1,0 +1,69 @@
+# ====================================================================
+# .gitignore for Red Lion Racing SolidWorks Tube Cut Template Add-in
+# ====================================================================
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+dist/
+*.dll.old
+
+# Visual Studio / Visual Studio Code
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.ide/
+*.ncb
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+
+# .NET / CLI & NuGet
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nupkg
+*.snupkg
+.dotnet_cli/
+.appdata/
+.localappdata/
+.nuget_packages/
+packages/
+!packages/repositories.config
+
+# SolidWorks Temporary & Auto-recovery Files
+~$*.sldprt
+~$*.sldasm
+~$*.slddrw
+~$*.SLDPRT
+~$*.SLDASM
+~$*.SLDDRW
+*.bak
+*.swp
+
+# Python Caches & Environments (Prototypes)
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Temporary outputs
+demo_output_csharp/
+test_output/
+*.tmp

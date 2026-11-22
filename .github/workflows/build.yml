@@ -1,0 +1,29 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup MSBuild and .NET Framework
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Setup NuGet
+      uses: nuget/setup-nuget@v2
+
+    - name: Build Solution
+      run: |
+        msbuild SolidWorks_TubeCutTemplate_Addin.sln /p:Configuration=Release /p:Platform=x64
+
+    - name: Run Standalone Verification Demo
+      run: |
+        .\SolidWorks_TubeCutTemplate_Addin\StandaloneDemo\bin\x64\Release\net48\BajaSAE.StandaloneDemo.exe

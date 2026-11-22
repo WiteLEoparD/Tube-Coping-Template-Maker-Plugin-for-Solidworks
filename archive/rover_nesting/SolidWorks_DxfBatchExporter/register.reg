@@ -1,0 +1,44 @@
+Windows Registry Editor Version 5.00
+
+[-HKEY_CURRENT_USER\Software\Classes\CLSID\{A4D8B923-3E4C-4F91-8D62-7F0F3D5B91A2}]
+[-HKEY_CURRENT_USER\Software\Classes\SolidWorksDxfBatchExporter.SwAddin]
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SolidWorksDxfBatchExporter.SwAddin]
+@="SolidWorksDxfBatchExporter.SwAddin"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SolidWorksDxfBatchExporter.SwAddin\CLSID]
+@="{A4D8B923-3E4C-4F91-8D62-7F0F3D5B91A2}"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{A4D8B923-3E4C-4F91-8D62-7F0F3D5B91A2}]
+@="SolidWorksDxfBatchExporter.SwAddin"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{A4D8B923-3E4C-4F91-8D62-7F0F3D5B91A2}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="SolidWorksDxfBatchExporter.SwAddin"
+"Assembly"="SolidWorksDxfBatchExporter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/mhasa/OneDrive/Documents/Auto template generator/SolidWorks_DxfBatchExporter/bin/x64/Release/SolidWorksDxfBatchExporter.dll"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{A4D8B923-3E4C-4F91-8D62-7F0F3D5B91A2}\InprocServer32\1.0.0.0]
+"Class"="SolidWorksDxfBatchExporter.SwAddin"
+"Assembly"="SolidWorksDxfBatchExporter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/mhasa/OneDrive/Documents/Auto template generator/SolidWorks_DxfBatchExporter/bin/x64/Release/SolidWorksDxfBatchExporter.dll"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{A4D8B923-3E4C-4F91-8D62-7F0F3D5B91A2}\ProgId]
+@="SolidWorksDxfBatchExporter.SwAddin"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{A4D8B923-3E4C-4F91-8D62-7F0F3D5B91A2}\Implemented Categories]
+
+[HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{A4D8B923-3E4C-4F91-8D62-7F0F3D5B91A2}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}]
+
+[HKEY_CURRENT_USER\Software\SolidWorks\Addins\{A4D8B923-3E4C-4F91-8D62-7F0F3D5B91A2}]
+@=dword:00000001
+"Title"="Batch 1/8\" Plate DXF Exporter"
+"Description"="Batch exports unsuppressed 1/8\" nominal plate parts to 1:1 DXF with quantity tags."
+
+[HKEY_LOCAL_MACHINE\Software\SolidWorks\Addins\{A4D8B923-3E4C-4F91-8D62-7F0F3D5B91A2}]
+@=dword:00000001
+"Title"="Batch 1/8\" Plate DXF Exporter"
+"Description"="Batch exports unsuppressed 1/8\" nominal plate parts to 1:1 DXF with quantity tags."

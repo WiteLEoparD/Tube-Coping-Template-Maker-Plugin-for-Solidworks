@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <Platforms>x64</Platforms>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>RedLionRacing.Installer</RootNamespace>
+    <AssemblyName>RedLionRacing_TubeTemplates_Installer</AssemblyName>
+    <OutputPath>..\dist\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <ApplicationIcon></ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\bin\x64\Release\BajaSAE.TubeCutTemplateAddin.dll">
+      <Link>Resources\BajaSAE.TubeCutTemplateAddin.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\lib\SolidWorks.Interop.sldworks.dll">
+      <Link>Resources\SolidWorks.Interop.sldworks.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\lib\SolidWorks.Interop.swconst.dll">
+      <Link>Resources\SolidWorks.Interop.swconst.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\lib\SolidWorks.Interop.swpublished.dll">
+      <Link>Resources\SolidWorks.Interop.swpublished.dll</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Resources\red_lion_logo.png">
+      <Link>Resources\red_lion_logo.png</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
