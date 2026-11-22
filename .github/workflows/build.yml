@@ -14,15 +14,20 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
-    - name: Setup MSBuild and .NET Framework
+    - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
 
-    - name: Setup NuGet
-      uses: nuget/setup-nuget@v2
-
-    - name: Build Solution
+    - name: Build SolidWorks Add-in Library
       run: |
-        msbuild SolidWorks_TubeCutTemplate_Addin.sln /p:Configuration=Release /p:Platform=x64
+        msbuild SolidWorks_TubeCutTemplate_Addin\SolidWorks_TubeCutTemplate_Addin.csproj /p:Configuration=Release /p:Platform=x64
+
+    - name: Build Standalone Demo
+      run: |
+        msbuild SolidWorks_TubeCutTemplate_Addin\StandaloneDemo\StandaloneDemo.csproj /p:Configuration=Release /p:Platform=x64
+
+    - name: Build Installer GUI
+      run: |
+        msbuild SolidWorks_TubeCutTemplate_Addin\Installer\Installer.csproj /p:Configuration=Release /p:Platform=x64
 
     - name: Run Standalone Verification Demo
       run: |

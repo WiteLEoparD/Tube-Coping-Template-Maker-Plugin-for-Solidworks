@@ -7,7 +7,8 @@
     <RootNamespace>BajaSAE.TubeCutTemplateAddin</RootNamespace>
     <AssemblyName>BajaSAE.TubeCutTemplateAddin</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <OutputPath>bin\x64\$(Configuration)\</OutputPath>
+    <OutputPath>$(MSBuildThisFileDirectory)bin\x64\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>$(MSBuildThisFileDirectory)obj\x64\$(Configuration)\</IntermediateOutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -22,22 +23,24 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Resources\red_lion_logo.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\red_lion_logo.png">
+      <Link>Resources\red_lion_logo.png</Link>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="SolidWorks.Interop.sldworks">
-      <HintPath>lib\SolidWorks.Interop.sldworks.dll</HintPath>
+      <HintPath>$(MSBuildThisFileDirectory)lib\SolidWorks.Interop.sldworks.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <Private>True</Private>
     </Reference>
     <Reference Include="SolidWorks.Interop.swconst">
-      <HintPath>lib\SolidWorks.Interop.swconst.dll</HintPath>
+      <HintPath>$(MSBuildThisFileDirectory)lib\SolidWorks.Interop.swconst.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <Private>True</Private>
     </Reference>
     <Reference Include="SolidWorks.Interop.swpublished">
-      <HintPath>lib\SolidWorks.Interop.swpublished.dll</HintPath>
+      <HintPath>$(MSBuildThisFileDirectory)lib\SolidWorks.Interop.swpublished.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <Private>True</Private>
     </Reference>

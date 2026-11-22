@@ -7,25 +7,30 @@
     <UseWindowsForms>true</UseWindowsForms>
     <RootNamespace>RedLionRacing.Installer</RootNamespace>
     <AssemblyName>RedLionRacing_TubeTemplates_Installer</AssemblyName>
-    <OutputPath>..\dist\</OutputPath>
+    <OutputPath>$(MSBuildThisFileDirectory)..\dist\</OutputPath>
+    <IntermediateOutputPath>$(MSBuildThisFileDirectory)obj\$(Configuration)\</IntermediateOutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <ApplicationIcon></ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="..\bin\x64\Release\BajaSAE.TubeCutTemplateAddin.dll">
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\SolidWorks_TubeCutTemplate_Addin.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)..\bin\x64\Release\BajaSAE.TubeCutTemplateAddin.dll">
       <Link>Resources\BajaSAE.TubeCutTemplateAddin.dll</Link>
     </EmbeddedResource>
-    <EmbeddedResource Include="..\lib\SolidWorks.Interop.sldworks.dll">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)..\lib\SolidWorks.Interop.sldworks.dll">
       <Link>Resources\SolidWorks.Interop.sldworks.dll</Link>
     </EmbeddedResource>
-    <EmbeddedResource Include="..\lib\SolidWorks.Interop.swconst.dll">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)..\lib\SolidWorks.Interop.swconst.dll">
       <Link>Resources\SolidWorks.Interop.swconst.dll</Link>
     </EmbeddedResource>
-    <EmbeddedResource Include="..\lib\SolidWorks.Interop.swpublished.dll">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)..\lib\SolidWorks.Interop.swpublished.dll">
       <Link>Resources\SolidWorks.Interop.swpublished.dll</Link>
     </EmbeddedResource>
-    <EmbeddedResource Include="..\Resources\red_lion_logo.png">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)..\Resources\red_lion_logo.png">
       <Link>Resources\red_lion_logo.png</Link>
     </EmbeddedResource>
   </ItemGroup>
